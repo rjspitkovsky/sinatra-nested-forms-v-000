@@ -1,17 +1,21 @@
 class Ship
 
-  attr_accessor :name, :type, :booty 
+  attr_accessor :name, :type, :booty
 
-  @@all = [] 
+  @@all = []
 
   def initialize(name, type, booty)
-    @name = name 
-    @type = type 
-    @booty = booty 
-    @@all << self  
+    @name = name
+    @type = type
+    @booty = booty
+    @@all << self
+  end
+
+  def self.all
+    @@all
   end 
 
-  def self.all 
-    @@all 
+  def self.clear 
+    @@all.destroy 
   end 
 end
